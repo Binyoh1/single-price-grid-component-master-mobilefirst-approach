@@ -1,0 +1,171 @@
+/* karla-regular - latin */
+@font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('./assets/fonts/karla-v21-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./assets/fonts/karla-v21-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* karla-700 - latin */
+@font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('./assets/fonts/karla-v21-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./assets/fonts/karla-v21-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --ltcyan: hsl(179, 62%, 50%);
+    --bryellow: hsl(71, 73%, 54%);
+    --dkyellow: hsl(71, 73%, 48%);
+    --ltgray: hsl(204, 43%, 93%);
+    --grayblue: hsl(218, 22%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --graywhite: hsl(0, 0%, 85%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--ltgray);
+    font-weight: 400;
+    font-size: 100%;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2.75em 2em;
+}
+
+.wrapper {
+    overflow: hidden;
+    border-radius: 0.75em;
+}
+
+.join {
+    background-color: var(--white);
+    padding: 2em 1.5em;
+}
+
+.join h2 {
+    font-weight: 700;
+    color: var(--cyan);
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.join h3 {
+    color: var(--bryellow);
+}
+
+.join p {
+    line-height: 1.5;
+    color: var(--grayblue);
+}
+
+.details {
+    color: var(--white);
+}
+
+.sub {
+    padding: 2em 1.5em;
+    background-color: var(--cyan);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    color: var(--graywhite);
+    margin-bottom: 1em;
+}
+
+.price span {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 0.5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sub a {
+    background-color: var(--bryellow);
+    color: var(--white);
+    display: block;
+    text-align: center;
+    padding: 0.75em 0;
+    border-radius: 0.325em;
+    margin-top: 2.5em;
+    box-shadow: 0 0.5em 1em hsla(0, 0%, 0%, 0.15);
+}
+
+.sub a:hover {
+    background-color: var(--dkyellow);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.why {
+    padding: 2em 1.5em;
+    background-color: var(--ltcyan);
+}
+
+li {
+    font-size: 0.85rem;
+    margin-bottom: 0.5em;
+}
+
+.attribution {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 41em) {
+
+    .wrapper {
+        display: grid;
+        max-width: 40em;
+        margin: auto;
+    }
+
+    .join p {
+        padding-right: 2em;
+    }
+
+    .join,
+    .sub,
+    .why {
+        padding-left: 2.5em;
+    }
+
+    .details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
